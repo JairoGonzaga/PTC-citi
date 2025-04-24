@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,31 +11,28 @@
       body {
         margin: 0;
         padding: 0;
+        min-height: 100vh;
         background-color: #1A1F2C;
         color: #FFFFFF;
         font-family: 'Inter', sans-serif;
-      }
-
-      .hero {
-        min-height: 100vh;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         padding: 2rem;
       }
 
+      .container {
+        max-width: 800px;
+      }
+
       .profile-image {
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        margin-bottom: 2rem;
+        margin: 0 auto 2rem;
         background-color: #2A2F3C;
         border: 3px solid #C8C8C9;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         overflow: hidden;
       }
 
@@ -49,32 +46,27 @@
       h1 {
         font-size: 3rem;
         font-weight: 600;
-        letter-spacing: -0.025em;
+        margin-bottom: 1rem;
       }
 
-      .about {
-        padding: 4rem 2rem;
-        max-width: 700px;
-        margin: 0 auto;
-        text-align: center;
-      }
-
-      .about p {
+      p {
         font-size: 1.25rem;
         line-height: 1.75;
         color: #C8C8C9;
+        max-width: 600px;
+        margin: 0 auto;
         opacity: 0;
         transform: translateY(20px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
+        transition: opacity 0.8s ease, transform 0.8s ease;
       }
 
-      .about p.visible {
+      p.visible {
         opacity: 1;
         transform: translateY(0);
       }
 
       @media (max-width: 640px) {
-        .hero h1 {
+        h1 {
           font-size: 2rem;
         }
 
@@ -83,28 +75,25 @@
           height: 150px;
         }
 
-        .about p {
+        p {
           font-size: 1.1rem;
         }
       }
     </style>
   </head>
   <body>
-    <section class="hero">
+    <div class="container">
       <div class="profile-image">
         <img src="jairo.webp" alt="Jairo Gonzaga" />
       </div>
       <h1>Olá, sou Jairo Gonzaga</h1>
-    </section>
-
-    <section class="about">
       <p>
         Sou um ex estudante de EC e atual de CC (acabei de passar na transferência), sou muito fã de automobilismo, torço principalmente para Red Bull da F1 e Toyota e Lexus na WEC. Gosto de rock, minha banda favorita é Avenged Sevenfold, e também de filmes/séries com temáticas de dragões.
       </p>
-    </section>
+    </div>
 
     <script>
-      const paragraph = document.querySelector('.about p');
+      const paragraph = document.querySelector('p');
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
