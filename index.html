@@ -6,6 +6,7 @@
     <title>Jairo Gonzaga - citi ptc</title>
     <meta name="description" content="Página Pessoal de Jairo Gonzaga" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <style>
       body {
         margin: 0;
@@ -17,6 +18,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
       }
 
       .container {
@@ -64,6 +66,24 @@
         padding: 1rem;
       }
 
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .social-links a {
+        color: #C8C8C9;
+        font-size: 2rem;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .social-links a:hover {
+        color: #FFD700;
+      }
+
       @media (max-width: 640px) {
         .container {
           padding: 1.5rem;
@@ -95,8 +115,14 @@
       </div>
       <h1>Olá, sou Jairo Gonzaga</h1>
       <p>
-        Sou um ex estudante de EC e atual de CC(acabei de passar na transferencia), sou muito fã de auto mobilismo, torço principalmente para redbull da F1 e toyota e lexus na WEC, gosto de rock, minha banda favorita é avenged sevenfold, e de filmes/series com tematicas de dragões
+        Sou um ex estudante de EC e atual de CC(acabei de passar na transferência), sou muito fã de automobilismo, torço principalmente para Red Bull da F1 e Toyota e Lexus na WEC, gosto de rock, minha banda favorita é Avenged Sevenfold, e de filmes/series com temáticas de dragões.
       </p>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/jcgonzaganeto" target="_blank" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com/jairoscgn" target="_blank" class="fa fa-instagram"></a>
+        <a href="https://github.com/JairoGonzaga" target="_blank" class="fa fa-github"></a>
+      </div>
     </div>
 
     <script>
@@ -115,4 +141,3 @@
     </script>
   </body>
 </html>
-
