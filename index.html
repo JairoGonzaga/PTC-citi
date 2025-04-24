@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,14 +16,37 @@
         color: #FFFFFF;
         font-family: 'Inter', sans-serif;
         display: flex;
-        justify-content: center;
         align-items: center;
-        text-align: center;
-        padding: 2rem;
+        justify-content: center;
       }
 
       .container {
         max-width: 800px;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+      }
+
+      p {
+        font-size: 1.25rem;
+        line-height: 1.75;
+        color: #C8C8C9;
+        margin: 0 auto;
+        max-width: 600px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      p.visible {
+        opacity: 1;
+        transform: translateY(0);
       }
 
       .profile-image {
@@ -33,50 +56,31 @@
         margin: 0 auto 2rem;
         background-color: #2A2F3C;
         border: 3px solid #C8C8C9;
-        overflow: hidden;
-      }
-
-      .profile-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 50%;
-      }
-
-      h1 {
-        font-size: 3rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-      }
-
-      p {
-        font-size: 1.25rem;
-        line-height: 1.75;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: #C8C8C9;
-        max-width: 600px;
-        margin: 0 auto;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
-      }
-
-      p.visible {
-        opacity: 1;
-        transform: translateY(0);
+        font-size: 0.9rem;
+        text-align: center;
+        padding: 1rem;
       }
 
       @media (max-width: 640px) {
+        .container {
+          padding: 1.5rem;
+        }
+        
         h1 {
           font-size: 2rem;
+        }
+        
+        p {
+          font-size: 1.1rem;
         }
 
         .profile-image {
           width: 150px;
           height: 150px;
-        }
-
-        p {
-          font-size: 1.1rem;
         }
       }
     </style>
@@ -84,11 +88,15 @@
   <body>
     <div class="container">
       <div class="profile-image">
-        <img src="jairo.webp" alt="Jairo Gonzaga" />
+        <img 
+          src="jairo.webp" 
+          alt="Jairo Gonzaga" 
+          style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"
+        />
       </div>
       <h1>Olá, sou Jairo Gonzaga</h1>
       <p>
-        Sou um ex estudante de EC e atual de CC (acabei de passar na transferência), sou muito fã de automobilismo, torço principalmente para Red Bull da F1 e Toyota e Lexus na WEC. Gosto de rock, minha banda favorita é Avenged Sevenfold, e também de filmes/séries com temáticas de dragões.
+        Sou um ex estudante de EC e atual de CC(acabei de passar na transferencia), sou muito fã de auto mobilismo, torço principalmente para redbull da F1 e toyota e lexus na WEC, gosto de rock, minha banda favorita é avenged sevenfold, e de filmes/series com tematicas de dragões
       </p>
     </div>
 
@@ -108,3 +116,4 @@
     </script>
   </body>
 </html>
+
